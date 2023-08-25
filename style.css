@@ -1,0 +1,135 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'montserrat';
+  color:#fff;
+}
+#nav{
+  height:100px;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  /* background-color:red; */
+  padding:0 50px;
+  gap:50px;
+  position:fixed;
+  z-index:99;
+}
+#nav img{
+  height:100px;
+  width:100px;
+}
+
+#nav h4{
+  font-size:24px;
+  text-transform: uppercase;
+  color:transparent;
+  -webkit-text-stroke:2px yellowgreen;
+}
+video{
+  position:fixed;
+  object-fit:cover;
+  z-index:-1;
+}
+
+#main{
+  background-color:rgba(0, 0, 0, 0.364);
+  position:relative;
+}
+#page1{
+  height:100vh;
+  width:100%; 
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+#page1 h1{
+  font-size:120px;
+  font-weight:900;
+  position:relative;
+  /* background-color: red; */
+  
+
+}
+#page1 h1::before{
+  content:"EAT.DRINK.PLAY";
+  position:absolute;
+  color:black;
+  left:5px;
+  top:5px;
+  z-index:-1;
+  -webkit-text-stroke: 2px yellowgreen;
+}
+#page1 h2{
+  font-size:30px;
+}
+#page1 p{
+  width:50%;
+  font-size:18px;
+  margin-top:25px;
+}
+#cursor{
+  height:20px;
+  width:20px;
+  background-color:yellowgreen;
+  position:fixed;
+  z-index:9;
+  border-radius:50%;
+}
+
+#cursor-blur{
+  height:200px;
+  width:200px;
+  background-color:yellowgreen;
+  filter:blur(50px);
+  position:fixed;
+  z-index:9;
+  border-radius:50%;
+}
+
+#page2{
+  height:100vh;
+  width:100%;
+  text-transform:uppercase;
+  overflow-x: auto;
+  overflow-y:hidden;
+  position:relative;
+  z-index:10;
+}
+/* #scroller::-webkit-scrollbar{
+  display:none;
+} */
+#scroller{
+  display:flex;
+  animation:scroll;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#scroller h4{
+  font-size:100px;
+  white-space:nowrap;
+  color:transparent;
+  -webkit-text-stroke:5px yellowgreen;
+  margin:0 25px;
+}
+
+#scroller h4:hover{
+  color:yellowgreen;
+}
+
+
+@keyframes scroll{
+  from{
+    transform:translateX(0%);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+
+}
